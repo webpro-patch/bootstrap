@@ -5,18 +5,35 @@
 .btn-light {
   .button-variant(@btn-light-color; @btn-light-bg; @btn-light-border);
 }
-.btn-contrast {
+.btn.btn-contrast {
   .button-variant(@btn-contrast-color; @btn-contrast-bg; @btn-contrast-border);
+  
 
-  &:hover,
   &:focus,
-  &.focus,
+  &.focus {
+    color: @btn-contrast-bg;
+    background-color: @btn-primary-bg;
+        border-color: @btn-primary-bg;
+  }
+  &:hover {
+    color: @btn-contrast-bg;
+    background-color: @btn-primary-bg;
+        border-color: @btn-primary-bg;
+  }
   &:active,
   &.active,
   .open > .dropdown-toggle& {
     color: @btn-contrast-bg;
     background-color: @btn-primary-bg;
         border-color: @btn-primary-bg;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @btn-contrast-bg;
+      background-color: @btn-primary-bg;
+          border-color: @btn-primary-bg;
+    }
   }
 }
 
