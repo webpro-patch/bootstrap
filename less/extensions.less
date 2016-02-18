@@ -1,0 +1,52 @@
+﻿
+
+//custom buttons
+
+.btn-light {
+  .button-variant(@btn-light-color; @btn-light-bg; @btn-light-border);
+}
+.btn-contrast {
+  .button-variant(@btn-contrast-color; @btn-contrast-bg; @btn-contrast-border);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @btn-contrast-bg;
+    background-color: @btn-primary-bg;
+        border-color: @btn-primary-bg;
+  }
+}
+
+.ng-invalid {
+  border-color: red;
+}
+
+// UI-select overrides
+.ui-select-bootstrap .ui-select-choices-row.active > a.ui-select-choices-row-inner {
+  background-color: @btn-primary-bg;
+}
+
+// Add subinfo items
+.table-row-variant(subinfo; @state-subinfo-bg);
+.list-group-item-variant(subinfo; @state-subinfo-bg; @state-subinfo-text);
+.alert-subinfo {
+  .alert-variant(@alert-subinfo-bg; @alert-subinfo-border; @alert-subinfo-text);
+}
+.panel-subinfo {
+  .panel-variant(@panel-subinfo-border; @panel-subinfo-text; @panel-subinfo-heading-bg; @panel-subinfo-border);
+}
+.btn-subinfo {
+  .button-variant(@btn-subinfo-color; @btn-subinfo-bg; @btn-subinfo-border);
+}
+.alert-subinfo {
+  .alert-variant(@alert-subinfo-bg; @alert-subinfo-border; @alert-subinfo-text);
+}
+.text-subinfo {
+  .text-emphasis-variant(@state-subinfo-text);
+}
+.bg-subinfo {
+  .bg-variant(@state-subinfo-bg);
+}
