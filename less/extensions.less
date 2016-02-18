@@ -5,7 +5,7 @@
 .btn-light {
   .button-variant(@btn-light-color; @btn-light-bg; @btn-light-border);
 }
-.btn.btn-contrast {
+.btn-contrast {
   .button-variant(@btn-contrast-color; @btn-contrast-bg; @btn-contrast-border);
   
 
@@ -33,6 +33,36 @@
       color: @btn-contrast-bg;
       background-color: @btn-primary-bg;
           border-color: @btn-primary-bg;
+    }
+  }
+}
+
+/* override default style hovering effects */
+.btn-default {
+  &:focus,
+  &.focus {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #ffffff;
+      background-color: #3e3e3e;
+          border-color: #3e3e3e;
     }
   }
 }
