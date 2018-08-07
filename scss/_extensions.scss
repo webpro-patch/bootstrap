@@ -1,0 +1,170 @@
+
+
+//custom buttons
+
+.btn-light {
+  @include button-variant($btn-light-color, $btn-light-bg, $btn-light-border);
+}
+.btn-contrast {
+  @include button-variant($btn-contrast-color, $btn-contrast-bg, $btn-contrast-border);
+
+
+  &:focus,
+  &.focus {
+    color: $btn-contrast-bg;
+    background-color: $primary;
+        border-color: $primary;
+  }
+  &:hover {
+    color: $btn-contrast-bg;
+    background-color: $primary;
+        border-color: $primary;
+  }
+  &:active,
+  &.active{
+    color: $btn-contrast-bg;
+    background-color: $primary;
+        border-color: $primary;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-contrast-bg;
+      background-color: $primary;
+          border-color: $primary;
+    }
+  }
+}
+.open > .dropdown-toggle.btn-contrast {
+  color: $btn-contrast-bg;
+  background-color: $primary;
+      border-color: $primary;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-contrast-bg;
+    background-color: $primary;
+        border-color: $primary;
+  }
+}
+
+/* override default style hovering effects */
+.btn-default {
+  &:focus,
+  &.focus {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+  }
+  &:active,
+  &.active {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #ffffff;
+      background-color: #3e3e3e;
+          border-color: #3e3e3e;
+    }
+  }
+}
+.open > .dropdown-toggle.btn-default {
+  color: #ffffff;
+  background-color: #3e3e3e;
+      border-color: #3e3e3e;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: #ffffff;
+    background-color: #3e3e3e;
+        border-color: #3e3e3e;
+  }
+}
+
+.ng-invalid {
+  border-color: red;
+}
+
+// UI-select overrides
+.ui-select-bootstrap .ui-select-choices-row.active > a.ui-select-choices-row-inner {
+  background-color: $primary;
+}
+
+// Add subinfo items
+@include table-row-variant(subinfo, $state-subinfo-bg);
+@include list-group-item-variant(subinfo, $state-subinfo-bg, $state-subinfo-text);
+.alert-subinfo {
+  @include alert-variant($alert-subinfo-bg, $alert-subinfo-border, $alert-subinfo-text);
+}
+.btn-subinfo {
+   @include button-variant($white, $subinfo, $subinfo);
+}
+.alert-subinfo {
+   @include alert-variant($alert-subinfo-bg, $alert-subinfo-border, $alert-subinfo-text);
+}
+.text-subinfo {
+   @include text-emphasis-variant(text-subinfo, $state-subinfo-text);
+}
+.bg-subinfo {
+   @include bg-variant(bg-subinfo, $state-subinfo-bg);
+}
+
+// Keep default font size in small form groups
+.form-horizontal .form-group-sm .control-label {
+  font-size: inherit;
+}
+
+.nav-pills {
+  margin-bottom: 15px;
+}
+.nav-pills li {
+  background-color: #F6F6F6;
+}
+.nav-pills>li+li {
+  margin-left: 0;
+}
+
+ // Modals
+.modal-dialog {
+  margin: 42px auto 0 auto;
+}
+
+.modal-auto .modal-dialog {
+  max-width: calc("100% - 84px");
+  width: auto;
+}
+
+.modal-body {
+  min-height: 50px;
+  max-height: calc("100vh - 135px");
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.modal-header {
+  padding: 10px;
+}
+
+.modal-footer {
+  padding: 5px;
+}
+
+.modal-header h4,
+.modal-header .h4,
+.modal-header h5,
+.modal-header .h5,
+.modal-header h6,
+.modal-header .h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
